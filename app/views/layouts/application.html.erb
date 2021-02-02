@@ -11,8 +11,8 @@
   </head>
 
   <body>
-  <%= if user_signed_in? %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete. data: { confirm: "ログアウトしますか？" } %>
+  <% if user_signed_in? %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
     <%= link_to "アカウント編集", edit_user_registration_path %>
   <% else %>
     <%= link_to "ログイン", new_user_session_path %>
