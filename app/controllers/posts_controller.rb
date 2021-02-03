@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
     #コメントは表示させない
     # 編集時に順番が入れ替わらないようにPost.allは使用しない
-    @post = Post.order(id: :asc)
+    @posts = Post.order(id: :asc)
   end
 
   def show
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
-    post.update!
+    post.update!(post_params)
     redirect_to posts_path
   end
 
