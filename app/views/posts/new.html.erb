@@ -1,0 +1,15 @@
+<%# 後でBootstrapを使用した書き方に変更する %>
+<h1>新規投稿</h1>
+<%= form_with model: @post, local: true do |form| %>
+  <div>
+    <%= form.label :image, "画像投稿" %>
+    <%= file_field :image %>
+  </div>
+  <div>
+    <%= form.label :content, '内容' %>
+    <%= text_field :content%>
+  </div>
+  <div>
+    <%= form.submit '投稿' %>
+  </div>
+<% end %>
