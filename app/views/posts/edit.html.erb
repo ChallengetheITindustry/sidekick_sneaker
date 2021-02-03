@@ -1,0 +1,17 @@
+<%# 後でBootstrapを使用した書き方に変更する %>
+<h1>編集</h1>
+<%= form_with model: @post, local: true do |form| %>
+  <div>
+    <%= form.label :image, "画像投稿" %>
+    <%= form.file_field :image %>
+  </div>
+  <div>
+    <%= form.label :content, '内容' %>
+    <%= form.text_field :content%>
+  </div>
+  <div>
+    <%= form.submit '投稿' %>
+  </div>
+<% end %>
+
+<%= link_to '一覧画面へ', posts_path %>
