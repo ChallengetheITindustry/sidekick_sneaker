@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-    <td scope="col"><%= link_to "新規投稿", new_post_path %></td>
+      <td scope="col"><%= link_to "新規投稿", new_post_path %></td>
     </tr>
     <tr>
       <th scope="col">No.</th>
@@ -18,6 +18,12 @@
         <td><%= post.image %></td>
         <td><%= post.content %></td>
         <td><%= post.user.name %></td>
+        <td><% if post.liked_by?(current_user) %>
+          <%= link_to '★', post_post_likes_path(post), method: :delete %>
+          <% else %>
+            <%# 「いいね」していない %>
+          <%= link_to '☆', post_post_likes_path(post), method: :post %>
+          <% end %></td>
         <td>
           <%= link_to "詳細", post %>
           <%= link_to "編集", edit_post_path(post) %>
