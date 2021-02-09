@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_02_03_104933) do
 
   create_table "posts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "image", null: false
+    t.string "image"
     t.text "content", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
