@@ -17,6 +17,7 @@
         <th scope="row"><%= i %></th>
         <td><%= post.image %></td>
         <td><%= post.content %></td>
+        <td><%= post.user.name %></td>
         <td>
           <%= link_to "詳細", post %>
           <%= link_to "編集", edit_post_path(post) %>
