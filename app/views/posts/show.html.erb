@@ -1,8 +1,16 @@
 <%# 後でBootstrapを使用した書き方に変更する %>
 <h1>詳細</h1>
 <div style="border:1px solid black; padding: 20px;">
-<%= @post.image %>
-<%= @post.content %>
+  <%= @post.image %>
+  <%= @post.content %>
+</div>
+<div>
+  <hr>
+  <h1>コメント一覧</h1>
+  <% @comments.each do |comment| %>
+    <%= comment.content %>
+  <% end %>
 </div>
 
+<%= link_to 'コメントを投稿する', post_comments_path(@comments), method: :post %> 
 <%= link_to '一覧画面へ', posts_path %>

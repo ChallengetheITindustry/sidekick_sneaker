@@ -1,0 +1,12 @@
+<h1>コメント投稿画面</h1>
+<%= form_with model: @comments, local: true, do | comment | %>
+  <div>
+    <%= comment.label :content, '内容' %>
+    <%= comment.text_field :content %>
+  </div>
+  <div>
+    <%= form.submit 'コメントを投稿する' %>
+  </div>
+<% end %>
+
+<%= link_to '一覧画面へ', posts_path %>
