@@ -5,12 +5,11 @@
   <%= @post.content %>
 </div>
 <div>
-  <hr>
   <h1>コメント一覧</h1>
-  <% @comments.each do |comment| %>
-    <%= comment.content %>
+  <%= form_for [@post, @comment] do |f| %>
+    <%= f.text_field :content %>
+    <br>
+    <%= f.submit 'コメントする' %>
   <% end %>
-</div>
-
-<%= link_to 'コメントを投稿する', post_comments_path(@comments), method: :post %> 
-<%= link_to '一覧画面へ', posts_path %>
+  <%= @comments.content %>
+  <%= link_to '一覧画面へ', posts_path %>
