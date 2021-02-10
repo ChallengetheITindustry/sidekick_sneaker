@@ -8,8 +8,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comments = @post.comments
-    @comments = Comment.new
-    
+    @comment = current_user.comments.new
   end
 
   def new
@@ -18,7 +17,7 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.create!(post_params)
-    redirect_to posts_path
+    redirect_back(fallback_location: root_path)
   end
 
   def edit

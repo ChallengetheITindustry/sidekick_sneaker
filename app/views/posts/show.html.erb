@@ -8,8 +8,14 @@
   <h1>コメント一覧</h1>
   <%= form_for [@post, @comment] do |f| %>
     <%= f.text_field :content %>
+    <%= f.hidden_field :post_id, value: @post.id %>
     <br>
     <%= f.submit 'コメントする' %>
   <% end %>
-  <%= @comments.content %>
+  </div>
+<div>
+  <% @comments.each do |comment| %>
+  <p><%= comment.content %></p>
+  <% end %>
+  </div>
   <%= link_to '一覧画面へ', posts_path %>
