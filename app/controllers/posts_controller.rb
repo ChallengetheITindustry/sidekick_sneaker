@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def index
     #コメントは表示させない
     # 編集時に順番が入れ替わらないようにPost.allは使用しない
