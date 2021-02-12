@@ -9,4 +9,6 @@ class Post < ApplicationRecord
     def liked_by?(user)
         post_likes.find_by(user_id: user.id).present?
     end
+
+    mount_uploader :image, ImageUploader
 end
