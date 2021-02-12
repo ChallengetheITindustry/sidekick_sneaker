@@ -1,8 +1,11 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     #コメントは表示させない
     # 編集時に順番が入れ替わらないようにPost.allは使用しない
-    @posts = Post.order(id: :asc)
+    @posts = Post.all
+
   end
 
   def show
@@ -17,6 +20,7 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.create!(post_params)
+    @post.user_id = current_user.id
     redirect_to posts_path
   end
 
@@ -39,6 +43,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :image)
+    params.require(:post).permit(:content, :image, :user)
   end
 end
