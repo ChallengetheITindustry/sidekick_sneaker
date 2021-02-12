@@ -1,5 +1,6 @@
+  <br>
   <% if user_signed_in? %>
-    <%# <%= link_to 'マイページ', %>
+    <%= link_to 'マイページ', user_path(:id) %>
     <%# <%= link_to 'コレクション', %>
     <%= link_to "タイムライン", posts_path %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
