@@ -6,7 +6,7 @@ class Post < ApplicationRecord
     has_many :liked_users, through: :post_likes, source: :user
     validates :content, presence: true
   # post を user が「いいね！」しているときは「true」，「いいね」していないときは「false」↓
-    def liked_by?(current_user)
+    def liked_by?(user)
         post_likes.find_by(user_id: user.id).present?
     end
 end
