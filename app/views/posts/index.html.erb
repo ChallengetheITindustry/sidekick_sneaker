@@ -15,7 +15,11 @@
     <% @posts.each.with_index(1) do |post, i| %>
       <tr>
         <th scope="row"><%= i %></th>
-        <td><%= post.image.url %></td>
+        <% if post.user.image? %>
+        <td><%= image_tag post.image.url %></td><br>
+        <% else %>
+        <img src="/assets/default.png" class="icon" alt="ユーザーアイコン" %>
+        <% end %>
         <td><%= post.content %></td>
         <td><%= post.user.name %></td>
         <td><% if post.liked_by?(current_user) %>
