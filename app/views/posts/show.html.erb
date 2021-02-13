@@ -1,7 +1,7 @@
 <%# 後でBootstrapを使用した書き方に変更する %>
 <h1>詳細</h1>
 <div style="border:1px solid black; padding: 20px;">
-  <%= @post.image %>
+  <%= image_tag @post.image.url %>
   <%= @post.content %>
 </div>
 <div>
