@@ -3,5 +3,13 @@
   <%= image_tag current_user.image.url %><br>
   <%= current_user.name %><br>
   <%= current_user.introduction %><br>
-  <%= link_to 'アカウント編集画面へ', edit_user_registration_path %>
+  <%= link_to 'アカウント編集画面へ', edit_user_registration_path %><br>
+  <% current_user.liked_posts.each do |likes| %>
+    <table>
+      <td><%= image_tag likes.image.url %></td>
+      <td><%= likes.content %></td>
+      <td><%= likes.user.name %></td>
+      <br>
+    </table>
+  <% end %>
 <% end %>
