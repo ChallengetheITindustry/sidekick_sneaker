@@ -12,10 +12,10 @@
     <br>
     <%= f.submit 'コメントする' %>
   <% end %>
-  </div>
+</div>
 <div>
   <% @comments.each do |comment| %>
-  <p><%= comment.content %></p>
+    <p><%= comment.content %></p>
   <% end %>
-  </div>
-  <%= link_to '一覧画面へ', posts_path %>
+</div>
+<%= link_to '一覧画面へ', posts_path %>
