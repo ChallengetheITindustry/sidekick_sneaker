@@ -1,27 +1,32 @@
 class CollectionsController < ApplicationController
+    before_action :collection_params, only: [:create, :update]
   def index
     @collection = Collection.all
   end
 
+  def new
+    @collection = Collection.new
+  end
+
   def create
-    @collection = Collection.creaate(collection_params)
+    @collection = Collection.create!(collection_params)
   end
 
   def update
     collection = Collection.find(params[:id])
     collection.update
-    redirect_to collection_index_path
+    redirect_to collections_path
   end
 
   def destroy
     collection = Collection.find(params[:id])
     collection.destroy
-    redirect_to collection_index_path
+    redirect_to collections_path
   end
 
   private
 
   def collection_params
-    params.require(:collection).permit(:image, :name, :explanation)
+    params.permit(:image, :name, :explanation)
   end
 end

@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2021_02_14_151635) do
   end
 
   create_table "collections", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "image", null: false
-    t.string "name", null: false
+    t.string "image"
+    t.string "name"
     t.text "explanation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
