@@ -9,7 +9,7 @@ class CollectionsController < ApplicationController
   end
 
   def create
-    @collection = Collection.create!(collection_params)
+    @collection = Collection.create(collection_params)
   end
 
   def update

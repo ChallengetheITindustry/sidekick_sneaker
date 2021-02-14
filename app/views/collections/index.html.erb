@@ -1,2 +1,7 @@
 <h1>ここはコレクション用のファイルです。</h1>
 <%= link_to '投稿', collections_path, method: :post %>
+<% @collection.each do |collection| %>
+  <%= image_tag collection.image.url %>
+  <%= collection.name %>
+  <%= collection.explanation %>
+<% end %>
