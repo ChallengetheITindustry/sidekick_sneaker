@@ -1,10 +1,6 @@
 class CollectionsController < ApplicationController
   def index
-    @collection = Collection.find(params[:id])
-  end
-
-  def show
-    @collection = Collection.find(params[:id])
+    @collection = Collection.all
   end
 
   def create
