@@ -1,6 +1,6 @@
   <br>
 <% if user_signed_in? %>
-  <div>
+  <div class="global_nav">
     <ul>
       <li><%= link_to 'マイページ', user_path(:id) %></li>
       <li><%= link_to 'コレクション', collections_path %></li>
@@ -11,7 +11,7 @@
     </ul>
   </div>
 <% else %>
-  <div>
+  <div class="global_nav">
     <ul>
       <li><%= link_to "ログイン", new_user_session_path %></li>
       <li><%= link_to "新規会員登録", new_user_registration_path %></li>
