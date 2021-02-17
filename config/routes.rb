@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "posts#index"
   devise_for :users
   resources :users, :only => [:show]
+  resources :collections
   resources :posts do
     resource :post_likes, only: [:create, :destroy]
     resources :comments, only: [:new, :create]

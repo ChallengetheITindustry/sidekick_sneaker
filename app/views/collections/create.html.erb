@@ -1,0 +1,10 @@
+<h1>自分のスニーカーを投稿してみましょう！！</h1>
+<%= form_with model: @collections, local: true do |collection| %>
+  <%= collection.label :image, '画像' %>
+  <%= collection.file_field :image %>
+  <%= collection.label :name, '名前' %>
+  <%= collection.text_field :name %>
+  <%= collection.label :explanation, '説明'%>
+  <%= collection.text_field :explanation %>
+  <%= collection.submit '送信'%>
+<% end %>
