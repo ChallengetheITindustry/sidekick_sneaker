@@ -14,7 +14,7 @@ class CollectionsController < ApplicationController
 
   def update
     collection = Collection.find(params[:id])
-    collection.update
+    collection.update(collection_params)
     redirect_to collections_path
   end
 
