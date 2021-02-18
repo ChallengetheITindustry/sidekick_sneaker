@@ -5,7 +5,6 @@ class PostsController < ApplicationController
     #コメントは表示させない
     # 編集時に順番が入れ替わらないようにPost.allは使用しない
     @posts = Post.all
-
   end
 
   def show

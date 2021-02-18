@@ -22,6 +22,7 @@
 .header-border {
     height: 30px;
     background-color: black;
+    margin: 0px;
 }
 
 .global-nav ul {
