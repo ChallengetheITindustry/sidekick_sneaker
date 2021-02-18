@@ -53,7 +53,7 @@
     opacity: 0.6;
 }
 
-/*ユーザーページ*/
+/*ユーザープロフィール*/
 
 .profile {
     border:1px solid black;
@@ -70,4 +70,27 @@
     margin-top: -80px;
     margin-left: 50px;
     background-color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+.user-details {
+    margin-left: 300px;
+}
+
+.user-details ul {
+    display: flex;
+    z-index: 1;
+    margin-top: -60px;
+}
+
+.user-details li {
+    list-style: none;
+}
+
+.user-name {
+    font-size: 30px;
+    margin-right: 30px;
 }

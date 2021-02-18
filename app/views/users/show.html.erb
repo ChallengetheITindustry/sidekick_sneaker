@@ -4,11 +4,16 @@
       <%= image_tag current_user.image.url, class: 'profile-image' %><br>
     </div>
     <div class="user-details">
-      <%= current_user.name %><br>
+    <ul>
+      <li class="user-name"><%= current_user.name %></li><br>
+      <li class="setting-img"><%= link_to image_tag("setting.png"), edit_user_registration_path, class: 'setting' %></li><br>
+      </ul>
       <%= current_user.introduction %><br>
     </div>
   </div>
-  <%= link_to 'アカウント編集画面へ', edit_user_registration_path %><br>
+  <br>
+  <h2>お気に入り一覧</h2>
+  <br>
   <% @liked_posts.each do |likes| %>
     <table style="border: 1px solid black ;">
       <td><%= image_tag likes.image.url %></td>
