@@ -19,6 +19,7 @@
      padding: 0px;
  }
 
+ /*ヘッダー*/
 .header-border {
     height: 30px;
     background-color: black;
@@ -27,7 +28,7 @@
 
 .global-nav ul {
     display: flex;
-    margin: 30px 200px 0 200px;
+    margin: 30px 200px 100px 200px;
     justify-content: space-between;
 }
 
@@ -50,4 +51,23 @@
 
 .global-nav ul li .link:hover {
     opacity: 0.6;
+}
+
+/*ユーザーページ*/
+
+.profile {
+    border:1px solid black;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 1;
+    margin-top: -80px;
+    margin-left: 50px;
+    background-color: white;
 }
