@@ -1,9 +1,28 @@
-<h1>マイページ</h1>
 <% if user_signed_in? %>
-  <%= image_tag current_user.image.url %><br>
-  <%= current_user.name %><br>
-  <%= current_user.introduction %><br>
-  <%= link_to 'アカウント編集画面へ', edit_user_registration_path %><br>
+  <div class="profile">
+    <div>
+      <%= image_tag current_user.image.url, class: 'profile-image' %><br>
+    </div>
+    <div class="user-details">
+    <ul>
+      <li class="user-name"><%= current_user.name %></li><br>
+      <li class="setting-img"><%= link_to image_tag("setting.png"), edit_user_registration_path, class: 'setting' %></li><br>
+      </ul>
+      <div class="follow">
+      <ul class="follow">
+      <%#↓フォロー機能実装の時に修正する%>
+      <li>フォロー：100人</li>
+      <li>フォロワー：100人</li>
+      </ul>
+    </div>
+    </div>
+    <hr>
+    <h2>自己紹介</h2>
+      <p class="introduction"><%= current_user.introduction %></p><br>
+  </div>
+  <br>
+  <h2>お気に入り一覧</h2>
+  <br>
   <% @liked_posts.each do |likes| %>
     <table style="border: 1px solid black ;">
       <td><%= image_tag likes.image.url %></td>
@@ -12,6 +31,5 @@
       <br>
     </table>
   <% end %>
-  <%= link_to '確認用のコレクション', collections_path %>
   <%= paginate @liked_posts %>
 <% end %>

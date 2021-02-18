@@ -19,6 +19,7 @@
      padding: 0px;
  }
 
+ /*ヘッダー*/
 .header-border {
     height: 30px;
     background-color: black;
@@ -27,7 +28,7 @@
 
 .global-nav ul {
     display: flex;
-    margin: 30px 200px 0 200px;
+    margin: 30px 200px 100px 200px;
     justify-content: space-between;
 }
 
@@ -50,4 +51,56 @@
 
 .global-nav ul li .link:hover {
     opacity: 0.6;
+}
+
+/*ユーザープロフィール*/
+
+.profile {
+    border:1px solid black;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 1;
+    margin-top: -80px;
+    margin-left: 50px;
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.user-details {
+    margin-left: 300px;
+}
+
+.user-details ul {
+    display: flex;
+    z-index: 1;
+    margin-top: -60px;
+}
+
+.user-details li {
+    list-style: none;
+}
+
+.user-name {
+    font-size: 30px;
+    margin-right: 30px;
+}
+
+ul.follow {
+    justify-content: space-between;
+}
+
+.follow li{
+    font-size: 15px;
+    margin-top: 60px;
 }
