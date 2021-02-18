@@ -1,12 +1,23 @@
+  <hr class="header-border">
   <br>
-  <% if user_signed_in? %>
-    <%= link_to 'マイページ', user_path(:id) %>
-    <%# <%= link_to 'コレクション', %>
-    <%= link_to "タイムライン", posts_path %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
-    <%# ↓ハンバーガーメニューで表示 %>
-    <%# <%= link_to "アカウント編集", edit_user_registration_path %>
-  <% else %>
-    <%= link_to "ログイン", new_user_session_path %>
-    <%= link_to "新規会員登録", new_user_registration_path %>
-  <% end %>
+<% if user_signed_in? %>
+      <div class="global-nav">
+    <ul>
+      <li><%= image_tag 'logo.png', class: 'logo' %></li>
+      <li><%= link_to 'マイページ', user_path(:id), class: 'link' %></li>
+      <li><%= link_to 'コレクション', collections_path, class: 'link' %></li>
+      <li><%= link_to "タイムライン", posts_path, class: 'link' %></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: 'link' %></li>
+      <%# ↓ハンバーガーメニューで表示 %>
+      <%# <%= link_to "アカウント編集", edit_user_registration_path %>
+    </ul>
+  </div>
+<% else %>
+  <div class="global-nav">
+    <ul>
+    <li><%= image_tag 'logo.png', class: 'logo' %></li>
+      <li><%= link_to "ログイン", new_user_session_path, class: 'link' %></li>
+      <li><%= link_to "新規会員登録", new_user_registration_path, class: 'link' %></li>
+    </ul>
+  </div>
+<% end %>
