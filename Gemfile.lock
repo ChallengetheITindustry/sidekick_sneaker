@@ -293,6 +293,7 @@ DEPENDENCIES
   devise
   devise-i18n
   jbuilder (~> 2.7)
+  kaminari
   listen (~> 3.3)
   mysql2 (~> 0.5)
   pry-rails

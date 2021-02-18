@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+     margin: 0px;
+     padding: 0px;
+ }
+
+.header-border {
+    height: 30px;
+    background-color: black;
+}
+
+.global-nav ul {
+    display: flex;
+    margin: 30px 200px 0 200px;
+    justify-content: space-between;
+}
+
+.global-nav ul li {
+    list-style: none;
+}
+
+.global-nav ul li .logo {
+    margin-right: 200px;
+    /*↓リファクタリングする*/
+    margin-top: -20px;
+    vertical-align: bottom;
+}
+
+.global-nav ul li .link {
+    text-decoration: none;
+    color: black;
+    margin-top: 30px;
+}
+
+.global-nav ul li .link:hover {
+    opacity: 0.6;
+}

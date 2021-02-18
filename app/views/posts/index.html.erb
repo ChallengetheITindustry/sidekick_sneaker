@@ -7,15 +7,16 @@
     </tr>
     <tr>
       <th scope="col">No.</th>
-      <th scope="col">タイトル</th>
-      <th scope="col"></th>
+      <th scope="col">画像</th>
+      <th scope="col">投稿内容</th>
+      <th scope="col">名前</th>
     </tr>
   </thead>
   <tbody>
     <% @posts.each.with_index(1) do |post, i| %>
       <tr>
         <th scope="row"><%= i %></th>
-        <td><%= post.image %></td>
+        <td><%= image_tag post.image.url %></td><br>
         <td><%= post.content %></td>
         <td><%= post.user.name %></td>
         <% if current_user.id != post.liked_by?(current_user)  %>
