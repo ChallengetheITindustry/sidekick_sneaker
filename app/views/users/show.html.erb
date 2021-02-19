@@ -32,7 +32,7 @@
         <%= image_tag likes.image.url, class: 'like-image' %>
       </div>
       <div class="like-user-details">
-        <p class="like-name"><%= image_tag current_user.image.url, class: 'post-user-image' %><%= likes.user.name %></p>
+        <p class="user-profile-image like-name"><%= image_tag likes.user.image.url, class: 'post-user-image' %><%= likes.user.name %></p>
         <p><%= likes.content %></p>
       </div>
     </div>
