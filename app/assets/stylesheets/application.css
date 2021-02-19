@@ -145,3 +145,10 @@ ul.follow {
         background-color: white;
         vertical-align: bottom;
 }
+
+/*フッター*/
+
+#footer {
+    background-color: black;
+    height: 100px;
+}
