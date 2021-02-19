@@ -35,6 +35,11 @@
         <p class="user-profile-image like-name"><%= image_tag likes.user.image.url, class: 'post-user-image' %><%= likes.user.name %></p>
         <p><%= likes.content %></p>
       </div>
+    <%= link_to "詳細", post_path %>
+    <% if current_user.id == likes.user_id %>
+      <%= link_to "編集", edit_post_path(:user_id) %>
+      <%= link_to "削除", post_path, method: :delete, data: { confirm: "削除しますか?" } %>
+    <% end %>
     </div>
     <br>
   <% end %>
