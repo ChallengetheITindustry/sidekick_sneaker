@@ -34,14 +34,22 @@
       <div class="like-user-details">
         <p class="user-profile-image like-name"><%= image_tag likes.user.image.url, class: 'post-user-image' %><%= likes.user.name %></p>
         <p><%= likes.content %></p>
+        <%= link_to "詳細", post_path %>
+        <% if current_user.id == likes.user_id %>
+          <%= link_to "編集", edit_post_path(:user_id) %>
+          <%= link_to "削除", post_path, method: :delete, data: { confirm: "削除しますか?" } %>
+        <% end %>
+        <% if current_user.id != likes.liked_by?(current_user)  %>
+          <td><% if likes.liked_by?(current_user) %>
+              <%= link_to '★', post_post_likes_path(@post), method: :delete %>
+            <% else %>
+              <%= link_to '☆', post_post_likes_path(@post), method: :post %>
+            <% end %></td>
+          <td>
+          <% end %>
+        </div>
       </div>
-    <%= link_to "詳細", post_path %>
-    <% if current_user.id == likes.user_id %>
-      <%= link_to "編集", edit_post_path(:user_id) %>
-      <%= link_to "削除", post_path, method: :delete, data: { confirm: "削除しますか?" } %>
+      <br>
     <% end %>
-    </div>
-    <br>
+    <%= paginate @liked_posts %>
   <% end %>
-  <%= paginate @liked_posts %>
-<% end %>

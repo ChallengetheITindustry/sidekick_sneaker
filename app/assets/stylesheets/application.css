@@ -109,34 +109,39 @@ ul.follow {
 
 .like-post {
     border: 1px solid black;
-    width: 600px;
+    width: 400px;
     margin: 0 auto;
     background-color: whitesmoke;
 }
 
 .like-post-image {
     border: 1px solid black;
-    width: 200px;
+    width: 300px;
     height: 200px;
     margin: 20px ;
+    margin: 20px auto 0 auto;
 }
 
 .like-image {
-    width: 200px;
+    width: 300px;
     height: 200px;
 }
 
+.like-user-details {
+    margin: 10px 0 10px 50px;
+}
+
 .like-name {
-    font-size: 30px;
+    font-size: 20px;
+
 }
 
 .post-user-image {
         border: 1px solid black;
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
         border-radius: 50%;
-        z-index: 1;
-        margin-top: -80px;
-        margin-left: 50px;
         background-color: white;
+        vertical-align: bottom;
 }
