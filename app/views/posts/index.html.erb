@@ -1,40 +1,27 @@
 <%# 後でBootstrapを使用した書き方に変更する %>
 <h1>投稿一覧</h1>
-<table>
-  <thead>
-    <tr>
-      <td scope="col"><%= link_to "新規投稿", new_post_path %></td>
-    </tr>
-    <tr>
-      <th scope="col">No.</th>
-      <th scope="col">画像</th>
-      <th scope="col">投稿内容</th>
-      <th scope="col">名前</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each.with_index(1) do |post, i| %>
-      <tr>
-        <th scope="row"><%= i %></th>
-        <td><%= image_tag post.image.url %></td>
-        <br>
-        <td><%= post.content %></td>
-        <td><%= post.user.name %></td>
-        <% if current_user.id != post.liked_by?(current_user)  %>
-          <td><% if post.liked_by?(current_user) %>
-              <%= link_to '★', post_post_likes_path(post), method: :delete %>
-            <% else %>
-              <%= link_to '☆', post_post_likes_path(post), method: :post %>
-            <% end %></td>
-          <td>
-          <% end %>
-          <%= link_to "詳細", post %>
-          <% if current_user.id == post.user_id %>
-            <%= link_to "編集", edit_post_path(post) %>
-            <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } %>
-          <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= link_to "新規投稿", new_post_path %>
+<% @posts.each.with_index(1) do |post, i| %>
+  <div class="like-post">
+    <div class="like-post-image">
+      <%= image_tag post.image.url, class: 'like-image' %>
+    </div>
+    <div class="like-user-details">
+      <p class="user-profile-image like-name"><%= image_tag post.user.image.url, class: 'post-user-image' %><%= post.user.name %></p>
+      <p><%= post.content %></p>
+      <%= link_to "詳細", post %>
+      <% if current_user.id == post.user_id %>
+        <%= link_to "編集", edit_post_path(:user_id) %>
+        <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } %>
+      <% end %>
+      <% if current_user.id != post.liked_by?(current_user)  %>
+        <% if post.liked_by?(current_user) %>
+          <%= link_to '★', post_post_likes_path(post), method: :delete %>
+        <% else %>
+          <%= link_to '☆', post_post_likes_path(post), method: :post %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <br>
+<% end %>
