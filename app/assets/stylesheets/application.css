@@ -14,12 +14,12 @@
  *= require_self
  */
 
- body {
-     margin: 0px;
-     padding: 0px;
- }
+body {
+    margin: 0px;
+    padding: 0px;
+}
 
- /*ヘッダー*/
+/*ヘッダー*/
 .header-border {
     height: 30px;
     background-color: black;
@@ -56,7 +56,7 @@
 /*ユーザープロフィール*/
 
 .profile {
-    border:1px solid black;
+    border: 1px solid black;
     width: 600px;
     margin: 0 auto;
 }
@@ -100,7 +100,43 @@ ul.follow {
     justify-content: space-between;
 }
 
-.follow li{
+.follow li {
     font-size: 15px;
     margin-top: 60px;
+}
+
+/*ユーザーお気に入り投稿*/
+
+.like-post {
+    border: 1px solid black;
+    width: 600px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+.like-post-image {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    margin: 20px ;
+}
+
+.like-image {
+    width: 200px;
+    height: 200px;
+}
+
+.like-name {
+    font-size: 30px;
+}
+
+.post-user-image {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        z-index: 1;
+        margin-top: -80px;
+        margin-left: 50px;
+        background-color: white;
 }

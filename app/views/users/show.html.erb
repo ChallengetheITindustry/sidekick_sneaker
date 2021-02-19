@@ -4,32 +4,39 @@
       <%= image_tag current_user.image.url, class: 'profile-image' %><br>
     </div>
     <div class="user-details">
-    <ul>
-      <li class="user-name"><%= current_user.name %></li><br>
-      <li class="setting-img"><%= link_to image_tag("setting.png"), edit_user_registration_path, class: 'setting' %></li><br>
+      <ul>
+        <li class="user-name"><%= current_user.name %></li>
+        <br>
+        <li class="setting-img"><%= link_to image_tag("setting.png"), edit_user_registration_path, class: 'setting' %></li>
+        <br>
       </ul>
       <div class="follow">
-      <ul class="follow">
-      <%#↓フォロー機能実装の時に修正する%>
-      <li>フォロー：100人</li>
-      <li>フォロワー：100人</li>
-      </ul>
-    </div>
+        <ul class="follow">
+          <%#↓フォロー機能実装の時に修正する%>
+          <li>フォロー：100人</li>
+          <li>フォロワー：100人</li>
+        </ul>
+      </div>
     </div>
     <hr>
     <h2>自己紹介</h2>
-      <p class="introduction"><%= current_user.introduction %></p><br>
+    <p class="introduction"><%= current_user.introduction %></p>
+    <br>
   </div>
   <br>
   <h2>お気に入り一覧</h2>
   <br>
   <% @liked_posts.each do |likes| %>
-    <table style="border: 1px solid black ;">
-      <td><%= image_tag likes.image.url %></td>
-      <td><%= likes.content %></td>
-      <td><%= likes.user.name %></td>
-      <br>
-    </table>
+    <div class="like-post">
+      <div class="like-post-image">
+        <%= image_tag likes.image.url, class: 'like-image' %>
+      </div>
+      <div class="like-user-details">
+        <p class="like-name"><%= image_tag current_user.image.url, class: 'post-user-image' %><%= likes.user.name %></p>
+        <p><%= likes.content %></p>
+      </div>
+    </div>
+    <br>
   <% end %>
   <%= paginate @liked_posts %>
 <% end %>
