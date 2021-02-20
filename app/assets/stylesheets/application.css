@@ -38,9 +38,11 @@ body {
 
 .global-nav ul li .logo {
     margin-right: 200px;
-    /*↓リファクタリングする*/
+}
+
+.global-nav ul li img {
+    /*ロゴの高さとテキストの高さを揃えるために設定⇨リファクタリングする*/
     margin-top: -20px;
-    vertical-align: bottom;
 }
 
 .global-nav ul li .link {
