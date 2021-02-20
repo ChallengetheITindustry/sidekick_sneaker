@@ -1,5 +1,7 @@
 <%= link_to 'リストを作成する', new_like_list_path %><br><br>
 <% @like_lists.each do |like_lists| %>
 <%= link_to like_lists.name, like_lists %>
+<%= link_to '削除', like_list_path(like_lists.id), method: :delete, data: {confirm: '削除しますか？'} %>
+<%= link_to '編集', edit_like_list_path(like_lists.id) %>
 <br>
 <% end %>
