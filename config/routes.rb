@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   #↓トップページは後で変更する。
   root "posts#index"
+  resource :tops
   devise_for :users
   resources :users, :only => [:show]
   resources :collections

@@ -173,3 +173,12 @@ ul.follow {
     width: 30px;
     height: 30px;
 }
+
+/*トップページ*/
+
+.top-image {
+    width: 1000px;
+    height: 600px;
+    margin: -80px auto 0 auto;
+    display: block;
+}
