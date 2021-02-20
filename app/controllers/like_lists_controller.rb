@@ -1,6 +1,6 @@
 class LikeListsController < ApplicationController
   def index
-    @like_lists = LikeList.find(params[:id])
+    @like_lists = LikeList.all
   end
 
   def show
@@ -8,14 +8,12 @@ class LikeListsController < ApplicationController
   end
 
   def new
+    @like_lists = LikeList.new
   end
 
   def create
-    @like_lists = LikeList.new(like_lists_params)
-    if @like_lists.save
-      redirect_to like_lists_path
-    else
-    end
+    like_lists = LikeList.create(like_lists_params)
+    redirect_to like_lists_path
   end
 
   def edit
@@ -23,7 +21,7 @@ class LikeListsController < ApplicationController
 
   def update
     like_list = LikeList.find(params[:id])
-    like_list.update
+    like_list.update(like_lists_params)
     redirect_to like_lists_path
   end
 
@@ -36,6 +34,6 @@ class LikeListsController < ApplicationController
   private
 
   def like_lists_params
-    params.require(:like_list).permit(:list_name, :user_id, :sneaker_id)
+    params.permit(:list_name, :user_id, :sneaker_id)
   end
 end
