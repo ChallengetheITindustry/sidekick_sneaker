@@ -120,7 +120,7 @@ ul.follow {
     border: 1px solid black;
     width: 300px;
     height: 200px;
-    margin: 20px ;
+    margin: 20px;
     margin: 20px auto 0 auto;
 }
 
@@ -139,13 +139,13 @@ ul.follow {
 }
 
 .post-user-image {
-        border: 1px solid black;
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-        border-radius: 50%;
-        background-color: white;
-        vertical-align: bottom;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: white;
+    vertical-align: bottom;
 }
 
 /*フッター*/
