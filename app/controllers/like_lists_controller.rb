@@ -12,7 +12,7 @@ class LikeListsController < ApplicationController
   end
 
   def create
-    like_lists = LikeList.create(like_lists_params)
+    @like_lists = LikeList.create(like_lists_params)
     redirect_to like_lists_path
   end
 
@@ -34,6 +34,6 @@ class LikeListsController < ApplicationController
   private
 
   def like_lists_params
-    params.permit(:list_name, :user_id, :sneaker_id)
+    params.require(:like_list).permit(:name, :user_id, :sneaker_id)
   end
 end

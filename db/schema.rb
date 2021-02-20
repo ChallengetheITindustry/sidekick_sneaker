@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2021_02_20_053248) do
   end
 
   create_table "like_lists", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "list_name"
+    t.string "name"
     t.bigint "user_id_id"
     t.bigint "sneaker_id_id"
     t.datetime "created_at", precision: 6, null: false
