@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   #↓トップページは後で変更する。
   root "posts#index"
   resource :tops
+  resources :like_lists
   devise_for :users
   resources :users, :only => [:show]
   resources :collections
