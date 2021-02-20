@@ -1,4 +1,4 @@
 <%= link_to 'リストを作成する', new_like_list_path %>
 <% @like_lists.each do |like_lists| %>
-<%= like_lists.name %>
+<%= link_to like_lists.name, like_lists_path(like_lists) %>
 <% end %>
