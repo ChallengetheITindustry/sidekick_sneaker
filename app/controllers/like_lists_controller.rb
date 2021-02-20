@@ -17,18 +17,18 @@ class LikeListsController < ApplicationController
   end
 
   def edit
+    @like_lists = LikeList.find(params[:id])
   end
 
   def update
-    like_list = LikeList.find(params[:id])
-    like_list.update
-    redirect_to root_path
+    like_lists = LikeList.find(params[:id])
+    like_lists.update!(like_lists_params)
+    redirect_to like_lists_path
   end
 
   def destroy
     like_list = LikeList.find(params[:id])
     like_list.destroy
-    redirect_to root_path
   end
 
   private

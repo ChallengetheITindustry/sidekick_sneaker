@@ -1,0 +1,5 @@
+<%= form_with model: @like_lists, local: true do |like_lists| %>
+<%= like_lists.label :name, 'リスト名' %>
+<%= like_lists.text_field :name %>
+<%= like_lists.submit %>
+<% end %>
