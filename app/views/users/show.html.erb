@@ -36,8 +36,8 @@
         <p><%= likes.content %></p>
         <%= link_to "詳細", post_path(likes) %>
         <% if current_user.id == likes.user_id %>
-          <%= link_to "編集", edit_post_path(:user_id) %>
-          <%= link_to "削除", post_path, method: :delete, data: { confirm: "削除しますか?" } %>
+          <%= link_to "編集", edit_post_path(likes) %>
+          <%= link_to "削除", post_path(likes), method: :delete, data: { confirm: "削除しますか?" } %>
         <% end %>
         <% if current_user.id != likes.liked_by?(current_user)  %>
           <td><% if likes.liked_by?(current_user) %>
