@@ -1,15 +1,17 @@
 class CollectionsController < ApplicationController
-    before_action :collection_params, only: [:create, :update]
+    
   def index
     @collection = Collection.all
   end
 
   def new
-    @collection = Collection.new
+    @collections = Collection.new
   end
 
   def create
-    @collection = Collection.create(collection_params)
+    @collection = current_user.collections.create!(collection_params)
+    @collection.user_id = current_user.id
+    redirect_to collections_path
   end
 
   def update
@@ -27,6 +29,6 @@ class CollectionsController < ApplicationController
   private
 
   def collection_params
-    params.permit(:image, :name, :explanation)
+    params.require(:collection).permit(:image, :name, :explanation, :user)
   end
 end
