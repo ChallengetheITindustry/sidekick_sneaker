@@ -1,7 +1,9 @@
-<h1>ここはコレクション用のファイルです。</h1>
-<%= link_to '投稿', new_collection_path %>
-<% @collection.each do |collection| %>
-  <%= image_tag collection.image.url %>
-  <%= collection.name %>
-  <%= collection.explanation %>
+  <h1>ここはコレクション用のファイルです。</h1>
+  <%= link_to '投稿', new_collection_path %>
+  <% @collection.each do |collection| %>
+<% if collection.user_id == current_user.id %>
+    <%= image_tag collection.image.url %>
+    <%= collection.name %>
+    <%= collection.explanation %>
+  <% end %>
 <% end %>
