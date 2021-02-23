@@ -4,6 +4,7 @@ class CreateCollections < ActiveRecord::Migration[6.1]
       t.string :image
       t.string :name
       t.text :explanation
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
