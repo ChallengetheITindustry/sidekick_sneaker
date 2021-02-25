@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   #↓トップページは後で変更する。
-  root "posts#index"
+  root "tops#show"
   resource :tops
   resources :like_lists
   devise_for :users
