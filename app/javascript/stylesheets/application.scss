@@ -29,34 +29,6 @@ body {
     margin: 0px;
 }
 
-.global-nav ul {
-    display: flex;
-    margin: 30px 200px 100px 200px;
-    justify-content: space-between;
-}
-
-.global-nav ul li {
-    list-style: none;
-}
-
-.global-nav ul li .logo {
-    margin-right: 200px;
-}
-
-.global-nav ul li img {
-    /*ロゴの高さとテキストの高さを揃えるために設定⇨リファクタリングする*/
-    margin-top: -20px;
-}
-
-.global-nav ul li .link {
-    text-decoration: none;
-    color: black;
-    margin-top: 30px;
-}
-
-.global-nav ul li .link:hover {
-    opacity: 0.6;
-}
 
 /*ユーザープロフィール*/
 
