@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     data: {
       humburger: false 
     },
+    methods: {
+      show: function() {
+        this.humburger = true;
+      }
+    },
     components: { App }
   })
 })

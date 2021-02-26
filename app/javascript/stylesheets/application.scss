@@ -29,7 +29,6 @@ body {
     margin: 0px;
 }
 
-// ハンバーガーメニュー
 .button {
     display: block;
     width: 50px;
@@ -83,6 +82,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: #d1dde3;
     z-index: 99;
     overflow-y: scroll;
 }
