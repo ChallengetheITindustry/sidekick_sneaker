@@ -20,9 +20,7 @@
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: 'link' %></li>
         </li>
         <li>
-          <div id="app">
-            {{ humburger }}
-          </div>
+        <%= render 'layouts/humburger' %>
         </li>
       <% else %>
         <li class="nav-item active">
@@ -35,9 +33,7 @@
           <li><%= link_to "新規会員登録", new_user_registration_path, class: 'link' %></li>
         </li>
         <li>
-          <div id="app">
-            {{ humburger }}
-          </div>
+        <%= render 'layouts/humburger' %>
         </li>
       <% end %>
     </ul>
