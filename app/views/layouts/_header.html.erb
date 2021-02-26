@@ -19,19 +19,6 @@
         <li class="nav-item">
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" }, class: 'link' %></li>
         </li>
-        <li>
-          <div class="dropdown">
-            <button id="btnOpenMenu" class="btn btn-primary dropdown-toggle"  
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              メニューを開く
-            </button>
-            <div class="dropdown-menu" aria-labelledby="btnOpenMenu">
-              <button class="dropdown-item" type="button"><%= link_to '確認用のlike_lists画面へ', like_lists_path %></a>
-              <button class="dropdown-item" type="button"><%= link_to 'トップページ', tops_path %></a>
-              <button class="dropdown-item" type="button">メニュー3</a>
-            </div>
-          </div>
-        </li>
       <% else %>
         <li class="nav-item active">
           <%= link_to image_tag("logo.png"), tops_path, width: '30', height: '30', class: 'd-inline-block align-top', alt: 'header-logo'  %>
@@ -41,19 +28,6 @@
         </li>
         <li class="nav-item">
           <li><%= link_to "新規会員登録", new_user_registration_path, class: 'link' %></li>
-        </li>
-        <li>
-          <div class="dropdown">
-            <button id="btnOpenMenu" class="btn btn-primary dropdown-toggle"  
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              メニューを開く
-            </button>
-            <div class="dropdown-menu" aria-labelledby="btnOpenMenu">
-              <button class="dropdown-item" type="button">メニュー1</a>
-              <button class="dropdown-item" type="button">メニュー2</a>
-              <button class="dropdown-item" type="button">メニュー3</a>
-            </div>
-          </div>
         </li>
       <% end %>
     </ul>
