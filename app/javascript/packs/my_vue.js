@@ -4,6 +4,9 @@ import App from '../app.vue'
 document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '#app',
+    data: {
+      humburger: false 
+    },
     components: { App }
   })
 })
