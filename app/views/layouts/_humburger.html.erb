@@ -1,17 +1,19 @@
 <div id="app">
-  <button class="button" type="button" name="button" v-on:click="show">
+  <button class="button" type="button" name="button" @click="show">
     <span class="top"></span>
     <span class="middle"></span>
     <span class="bottom"></span>
   </button>
-  <div id="humburger" class="nav" v-show="humburger">
+  <nav id="gnav" class="nav" v-if="gnav">
     <div class="nav__body">
       <ul class="nav__lst">
-        <li class="nav__item"><a>①</a></li>
-        <li class="nav__item"><a>②</a></li>
-        <li class="nav__item"><a>③</a></li>
+        <li class="nav__item"><a>Works</a></li>
+        <li class="nav__item"><a>Blog</a></li>
+        <li class="nav__item"><a>People</a></li>
+        <li class="nav__item"><a>Recruit</a></li>
+        <li class="nav__item"><a>Company</a></li>
+        <li class="nav__item"><a>Contact</a></li>
       </ul>
     </div>
-    <div class="nav__body"></div>
-  </div>
+  </nav>
 </div>
