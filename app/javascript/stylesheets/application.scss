@@ -1,0 +1,284 @@
+// 今後はcssを本ファイルに記述していく
+@import "~bootstrap/scss/bootstrap";
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*ヘッダー*/
+.header-border {
+    height: 30px;
+    background-color: black;
+    margin: 0px;
+}
+
+.li {
+    color: black;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.nav-ul {
+    width: 70%;
+    margin: 0 auto 100px;
+    justify-content: space-between;
+}
+
+.li:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+.header-img {
+    margin-right: 200px;
+    margin-bottom: 10px;
+}
+
+// ハンバーガーメニュー
+.button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    z-index: 100;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.button.is-open .top {
+    transform: rotate(45deg);
+}
+
+.button.is-open .middle {
+    opacity: 0;
+}
+
+.button.is-open .bottom {
+    transform: rotate(-45deg);
+}
+
+.button span {
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin: auto;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease;
+}
+
+.button span.top {
+    transform: translateY(-6px);
+}
+
+.button span.bottom {
+    transform: translateY(6px);
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background:linear-gradient(45deg, black 50%, white 50%);
+    z-index: 99;
+}
+
+.nav.v-enter,
+.nav.v-leave-to {
+    opacity: 0;
+}
+
+.nav.v-enter-to,
+.nav.v-leave {
+    opacity: 1;
+}
+
+.nav.v-enter-active,
+.nav.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.nav__body {
+    padding: 40px;
+}
+
+.nav__lst {
+    list-style: none;
+}
+
+.nav__item {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: white;
+    margin-top: 100px;
+}
+
+.nav__item~.nav__item {
+    margin-top: 8px;
+}
+
+.nav__item a {
+    color: #000;
+    padding: 8px 0;
+}
+
+.nav__item a:hover {
+    opacity: 0.6;
+} 
+
+/*ユーザープロフィール*/
+
+.profile {
+    border: 1px solid black;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 1;
+    margin-top: -80px;
+    margin-left: 50px;
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.user-details {
+    margin-left: 300px;
+}
+
+.user-details ul {
+    display: flex;
+    z-index: 1;
+    margin-top: -60px;
+}
+
+.user-details li {
+    list-style: none;
+}
+
+.user-name {
+    font-size: 30px;
+    margin-right: 30px;
+}
+
+ul.follow {
+    justify-content: space-between;
+}
+
+.follow li {
+    font-size: 15px;
+    margin-top: 60px;
+}
+
+/*ユーザーお気に入り投稿*/
+
+.like-post {
+    border: 1px solid black;
+    width: 400px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+.like-post-image {
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    margin: 20px auto 0 auto;
+}
+
+.like-image {
+    width: 300px;
+    height: 200px;
+}
+
+.like-user-details {
+    margin: 10px 0 10px 50px;
+}
+
+.like-name {
+    font-size: 20px;
+
+}
+
+.post-user-image {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: white;
+    vertical-align: bottom;
+}
+
+/*フッター*/
+
+#footer {
+    background-color: black;
+    height: 150px;
+    margin-top: 30px;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 30px auto 0 auto;
+}
+
+.footer-nav ul li {
+    list-style: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+/*トップページ*/
+
+.top-image {
+    width: 1000px;
+    height: 600px;
+    margin: -80px auto 0 auto;
+    display: block;
+}

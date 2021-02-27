@@ -1,0 +1,18 @@
+<div id="app">
+  <button class="button" type="button" name="button" @click="show">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </button>
+<transition>
+  <nav id="gnav" class="nav" v-if="gnav">
+    <div class="nav__body">
+      <ul class="nav__lst">
+        <li class="nav__item"><a>Likelist</a></li>
+        <li class="nav__item"><a>About</a></li>
+        <li class="nav__item"><a>Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</transition>
+</div>
