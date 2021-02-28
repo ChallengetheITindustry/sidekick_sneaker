@@ -10,7 +10,8 @@ import "channels"
 import "bootstrap/dist/js/bootstrap"
 
 Rails.start()
-Turbolinks.start()
+// 追加するとハンバーガーメニューがロードする旅に表示されてしまう。
+// Turbolinks.start()
 ActiveStorage.start()
 
 require("../stylesheets/application.scss")
