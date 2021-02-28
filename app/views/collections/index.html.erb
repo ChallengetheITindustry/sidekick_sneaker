@@ -1,18 +1,20 @@
   <%= link_to '投稿', new_collection_path %>
-<% @collection.each do |collection| %>
-  <% if collection.user_id == current_user.id %>
-    <div class="container">
-      <div class="row">
-        <div class="col-3">
-          <div class="card" style="width: 18rem;">
-            <%= image_tag collection.image.url , class: 'card-img-top' %>
-            <div class="card-body">
-              <h5 class="card-title"><%= collection.name %></h5>
-              <p class="card-text"><%= collection.explanation %></p>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <% @collection.each do |collection| %>
+      <% if collection.user_id == current_user.id %>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card card-style" style="width: 18rem;">
+            <a class="text-decoration-none" target="_blank" href="">
+              <%= image_tag collection.image.url , class: 'card-img-top' %>
+              <div class="card-body">
+                <p class="card-text">【<%= collection.name %>】</p>
+                <p class="card-title"><%= collection.explanation %></p>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-  <% end %>
-<% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
