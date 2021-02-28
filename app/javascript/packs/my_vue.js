@@ -11,12 +11,15 @@ const vue = new Vue({
     show: (e) => {
       let elm = e.currentTarget;
       let className = elm.className;
+      const body = document.getElementById('hidden')
       if (className.indexOf('is-open') != -1) {
         vue.$data.gnav = false;
         elm.className = 'button';
+        body.className -= " non-scroll ";
       } else {
         vue.$data.gnav = true;
         elm.className += " is-open";
+        body.className += " non-scroll ";
       }
     }
   }
