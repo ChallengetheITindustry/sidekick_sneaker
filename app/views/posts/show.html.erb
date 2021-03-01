@@ -15,7 +15,7 @@
 </div>
 <div>
   <% @comments.each do |comment| %>
-    <p><%= comment.content %></p>
+    <p class="user-profile-image like-name"><%= image_tag @post.user.image.url, class: 'post-user-image' %><%= @post.user.name %><%= comment.content %></p>
   <% end %>
 </div>
 <%= link_to '一覧画面へ', posts_path %>
