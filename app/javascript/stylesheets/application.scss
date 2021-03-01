@@ -315,11 +315,23 @@ ul.follow {
     font-size: 10px;
 }
 
+// コレクション
 .collection_btn {
+    width: 70px;
+    height: 70px;
     color: black;
+    background-color: whitesmoke;
     border: 1px solid black;
+    border-radius: 50%;
     position: fixed;
-    top: 650px;
-    left: 1200px;
+    top: 550px;
+    left: 1100px;
     z-index: 1;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.collection_btn:hover {
+    background-color: black;
+    color: white;
 }
