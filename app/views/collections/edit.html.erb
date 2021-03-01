@@ -1,0 +1,9 @@
+<%= form_with model: @collections, local: true do |c| %>
+  <%= c.label :image, '画像' %>
+  <%= c.file_field :image %>
+  <%= c.label :name, '名前' %>
+  <%= c.text_field :name %>
+  <%= c.label :explanation, '説明'%>
+  <%= c.text_field :explanation %>
+  <%= c.submit '送信'%>
+<% end %>
