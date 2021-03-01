@@ -105,7 +105,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    background:linear-gradient(45deg, black 50%, white 50%);
+    background: linear-gradient(45deg, black 50%, white 50%);
     z-index: 99;
 }
 
@@ -155,7 +155,7 @@ body {
 
 .nav__item a:hover {
     opacity: 0.6;
-} 
+}
 
 /*ユーザープロフィール*/
 
@@ -294,7 +294,7 @@ ul.follow {
 
 .card-style {
     max-width: 375px;
-    margin: 0 auto 68px auto;
+    margin: 0 auto;
     height: 370px;
 }
 
