@@ -4,7 +4,7 @@
     <% @collection.each do |collection| %>
       <% if collection.user_id == current_user.id %>
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card card-style" style="width: 18rem;">
+          <div class="card card-style mb-3" style="width: 18rem;">
             <a class="text-decoration-none" target="_blank" href="collections/new">
               <%= image_tag collection.image.url , class: 'card-img-top' %>
               <div class="card-body">
