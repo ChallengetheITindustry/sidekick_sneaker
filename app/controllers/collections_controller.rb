@@ -14,15 +14,19 @@ class CollectionsController < ApplicationController
     redirect_to collections_path
   end
 
+  def edit 
+    @collection = Collection.find(params[:id])
+  end
+
   def update
     collection = Collection.find(params[:id])
-    collection.update(collection_params)
+    collection.update!(collection_params)
     redirect_to collections_path
   end
 
   def destroy
     collection = Collection.find(params[:id])
-    collection.destroy
+    collection.destroy!
     redirect_to collections_path
   end
 
