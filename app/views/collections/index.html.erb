@@ -8,7 +8,7 @@
             <a class="text-decoration-none" target="_blank" href="collections/new">
               <%= image_tag collection.image.url , class: 'card-img-top' %>
               <div class="card-body">
-                <p class="card-text color sneaker-name">【<%= collection.name %>】<%= link_to '編集', edit_collection_path(collection)%></p>
+                <p class="card-text color sneaker-name">【<%= collection.name %>】<%= link_to '編集', edit_collection_path(collection)%><%= link_to '削除', collection , method: :delete, data: {confirm: '削除しますか？'} %></p>
                 <p class="card-title color sneaker-explanation"><%= collection.explanation %></p>
               </div>
             </a>
