@@ -105,7 +105,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    background:linear-gradient(45deg, black 50%, white 50%);
+    background: linear-gradient(45deg, black 50%, white 50%);
     z-index: 99;
 }
 
@@ -155,7 +155,7 @@ body {
 
 .nav__item a:hover {
     opacity: 0.6;
-} 
+}
 
 /*ユーザープロフィール*/
 
@@ -285,4 +285,55 @@ ul.follow {
     height: 600px;
     margin: -80px auto 0 auto;
     display: block;
+}
+
+// collectionのcard
+.text-title {
+    margin-top: 125px;
+}
+
+.card-style {
+    max-width: 375px;
+    margin: 0 auto;
+    height: 370px;
+}
+
+.card:hover {
+    opacity: 0.6;
+}
+
+.color {
+    color: black;
+}
+
+.sneaker-name {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sneaker-explanation {
+    font-size: 10px;
+}
+
+// コレクション
+.collection_btn {
+    width: 70px;
+    height: 70px;
+    color: black;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: fixed;
+    top: 550px;
+    left: 1100px;
+    z-index: 1;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.collection_btn:hover {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    text-decoration: none;
 }
