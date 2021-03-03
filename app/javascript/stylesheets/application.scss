@@ -323,7 +323,9 @@ ul.follow {
     top: 550px;
     left: 1100px;
     z-index: 1;
-    width: 80px;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
 }
 
 .collection_btn:hover {
@@ -331,6 +333,7 @@ ul.follow {
     background-color: black;
     color: white;
     text-decoration: none;
+    transition: 0.5s ease;
 }
 
 .collection_delete {
@@ -340,7 +343,6 @@ ul.follow {
     font-size: 30px;
     color: black;
     font-weight: bold;
-    width: 10px;
 }
 
 .collection_delete:hover {
