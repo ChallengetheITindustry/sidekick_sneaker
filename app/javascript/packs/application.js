@@ -16,3 +16,4 @@ ActiveStorage.start()
 
 require("../stylesheets/application.scss")
 require('jquery')
+require('jquery.js')
