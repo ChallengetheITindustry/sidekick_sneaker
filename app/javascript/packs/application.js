@@ -15,3 +15,5 @@ Rails.start()
 ActiveStorage.start()
 
 require("../stylesheets/application.scss")
+require('jquery')
+require('packs/jquery.js')
