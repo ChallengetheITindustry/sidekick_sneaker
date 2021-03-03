@@ -298,10 +298,6 @@ ul.follow {
     height: 370px;
 }
 
-.card:hover {
-    opacity: 0.6;
-}
-
 .color {
     color: black;
 }
@@ -334,6 +330,21 @@ ul.follow {
     border: 1px solid white;
     background-color: black;
     color: white;
+    text-decoration: none;
+}
+
+.collection_delete {
+    position: relative;
+    bottom: 320px;
+    left: 250px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    width: 10px;
+}
+
+.collection_delete:hover {
+    opacity: 0.4;
     text-decoration: none;
     transition: 0.5s ease;
 }
