@@ -320,17 +320,34 @@ ul.follow {
     border: 1px solid black;
     border-radius: 50%;
     position: fixed;
-    top: 550px;
-    left: 1100px;
+    top: 600px;
+    left: 1200px;
     z-index: 1;
-    width: 80px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    transition: 0.3s ease;
+    background-color: #DF962A;
+}
+
+.collection_btn:before {
+    content: '+';
+    font-size: 30px;
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+    z-index: 1;
+    color: black;
 }
 
 .collection_btn:hover {
-    border: 1px solid white;
-    background-color: black;
+    border: 5px solid #DF962A;
+    background-color: white;
     color: white;
     text-decoration: none;
+    transform: rotate(30deg) scale(1.2);
+    transition: 0.3s ease;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.12);
 }
 
 .collection_delete {
