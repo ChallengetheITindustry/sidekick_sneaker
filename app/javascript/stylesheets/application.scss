@@ -315,20 +315,19 @@ ul.follow {
     font-size: 10px;
 }
 
+.card-img-top {
+    height: 200px;
+}
+
 // コレクション
 .collection_btn {
-    width: 70px;
-    height: 70px;
-    color: black;
-    background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 50%;
     position: fixed;
     top: 550px;
     left: 1100px;
     z-index: 1;
-    text-align: center;
-    padding-top: 20px;
+    width: 80px;
 }
 
 .collection_btn:hover {
@@ -336,4 +335,5 @@ ul.follow {
     background-color: black;
     color: white;
     text-decoration: none;
+    transition: 0.5s ease;
 }
