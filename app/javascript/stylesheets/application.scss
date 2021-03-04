@@ -30,6 +30,10 @@ body {
 }
 
 /*ヘッダー*/
+.header {
+    height: 50px;
+}
+
 .header-border {
     height: 30px;
     background-color: black;
@@ -311,7 +315,7 @@ ul.follow {
 .top-image {
     width: 1000px;
     height: 600px;
-    margin: -80px auto 0 auto;
+    margin: 50px auto 0 auto;
     display: block;
 }
 
@@ -324,6 +328,10 @@ ul.follow {
     max-width: 375px;
     margin: 0 auto;
     height: 370px;
+}
+
+.collection_body {
+    margin-top: 80px;
 }
 
 .color {
