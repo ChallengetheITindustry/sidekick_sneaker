@@ -25,13 +25,15 @@ body {
 // 画面の見出しのスタイル
 .heading {
     text-align: center;
-    margin-top: -50px;
+    margin-top: 100px;
     margin-bottom: 50px;
 }
 
 /*ヘッダー*/
 .header {
     height: 50px;
+    display: fixed;
+    top: 0;
 }
 
 .header-border {
