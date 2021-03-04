@@ -58,6 +58,13 @@ body {
     margin-bottom: 10px;
 }
 
+// ヘッダーをスクロールした時の挙動
+
+#scroll-header {
+    display: none;
+}
+
+
 // ハンバーガーメニュー
 .button {
     display: block;
