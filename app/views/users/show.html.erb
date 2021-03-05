@@ -1,11 +1,9 @@
 <% if user_signed_in? %>
   <div class="container">
     <div class="row">
-      <div class="col-8 mx-auto">
+      <div class="col-7 mx-auto border rounded">
         <div class="profile">
-          <div>
-            <%= image_tag current_user.image.url, class: 'profile-image' %><br>
-          </div>
+            <%= image_tag current_user.image.url, class: 'profile-image border rounded-circle' %><br>
           <div class="user-details">
             <ul>
               <li class="user-name"><%= current_user.name %></li>
