@@ -1,27 +1,21 @@
 <% if user_signed_in? %>
-  <div class="profile">
-    <div>
-      <%= image_tag current_user.image.url, class: 'profile-image' %><br>
-    </div>
-    <div class="user-details">
-      <ul>
-        <li class="user-name"><%= current_user.name %></li>
-        <br>
-        <li class="setting-img"><%= link_to image_tag("setting.png"), edit_user_registration_path, class: 'setting' %></li>
-        <br>
-      </ul>
-      <div class="follow">
-        <ul class="follow">
-          <%#↓フォロー機能実装の時に修正する%>
-          <li>フォロー：100人</li>
-          <li>フォロワー：100人</li>
-        </ul>
+  <h1 class="heading">マイページ</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-7 mx-auto border rounded">
+        <div class="profile">
+          <%= image_tag current_user.image.url, class: 'profile-image border rounded-circle' %><br>
+          <div class="user-details">
+            <span class="user-name"><%= current_user.name %></span><%= link_to image_tag("gear.svg"), edit_user_registration_path, class: 'setting' %>
+            <br>
+          </div>
+          <hr>
+          <h3>自己紹介</h3>
+          <p class="introduction"><%= current_user.introduction %></p>
+          <br>
+        </div>
       </div>
     </div>
-    <hr>
-    <h2>自己紹介</h2>
-    <p class="introduction"><%= current_user.introduction %></p>
-    <br>
   </div>
   <br>
   <h2>お気に入り一覧</h2>

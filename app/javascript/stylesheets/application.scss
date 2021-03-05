@@ -25,8 +25,8 @@ body {
 // 画面の見出しのスタイル
 .heading {
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 70px;
+    margin-bottom: 100px;
 }
 
 /*ヘッダー*/
@@ -193,54 +193,33 @@ body {
 
 /*ユーザープロフィール*/
 
-.profile {
-    border: 1px solid black;
-    width: 600px;
-    margin: 150px auto 0 auto;
-}
-
 .profile-image {
-    border: 1px solid black;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     z-index: 1;
-    margin-top: -80px;
+    margin-top: -90px;
     margin-left: 50px;
     background-color: white;
 }
 
-h2 {
-    text-align: center;
-    font-weight: bold;
-}
-
-.user-details {
-    margin-left: 300px;
-}
-
-.user-details ul {
-    display: flex;
-    z-index: 1;
-    margin-top: -60px;
-}
-
-.user-details li {
-    list-style: none;
-}
-
 .user-name {
-    font-size: 30px;
-    margin-right: 30px;
+    font-size: 40px;
+    position: relative;
+    top: -70px;
+    left: 280px;
 }
 
-ul.follow {
-    justify-content: space-between;
+.setting {
+    margin-left: 20px;
+    margin-top: -10px;
+    position: relative;
+    top: -80px;
+    left: 300px;  
 }
 
-.follow li {
-    font-size: 15px;
-    margin-top: 60px;
+.setting:hover {
+    opacity: 0.6;
 }
 
 /*ユーザーお気に入り投稿*/
