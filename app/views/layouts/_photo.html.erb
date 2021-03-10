@@ -1,18 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      <p><%= image_tag 'camera.svg' %><span class="photo">PHOTO</span></p>
+      <p class="photo-icon"><%= image_tag 'camera.svg' %><span class="photo">PHOTO</span></p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-3">
-      One of three columns
+  <div class="row d-flex">
+    <div class="col-3 ml-3">
+      <p><%= image_tag 'photo1.jpg', class: 'photo-collection' %></p>
     </div>
-    <div class="col-3">
-      One of three columns
+    <div class="col-3 ml-3">
+      <p><%= image_tag 'photo2.jpg', class: 'photo-collection' %></p>
     </div>
-    <div class="col-3">
-      One of three columns
+    <div class="col-3 ml-3">
+      <p><%= image_tag 'photo3.jpg', class: 'photo-collection' %></p>
     </div>
   </div>
 </div>

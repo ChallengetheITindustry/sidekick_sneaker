@@ -297,8 +297,7 @@ body {
 .top-image {
     width: 1000px;
     height: 600px;
-    margin: 50px auto 0 auto;
-    display: block;
+    margin-top: 50px;
 }
 
 // collectionのcard
@@ -423,6 +422,18 @@ body {
 // photo部分
 
 .photo {
-    font-size: 40px;
-    margin-left: 20px;
+    font-size: 30px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.photo-collection {
+    width: 300px;
+    height: 200px;
+    // ↓リファクタリングする
+    margin-left: 100px;
+}
+
+.photo-icon {
+    margin-left: 150px;
 }
