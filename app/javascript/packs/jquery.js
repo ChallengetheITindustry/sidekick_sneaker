@@ -1,5 +1,5 @@
 $(window).on('scroll', function () {
-    $('header').toggleClass('scroll-ing', $(this).scrollTop() > 100)
+    $('header').toggleClass('scroll-ing', $(this).scrollTop() > 60) 
 });
 
 //フッターを最下部に固定
